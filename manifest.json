@@ -6,7 +6,9 @@
 	"description": "Konduto Antifraud Pixel",
 	"mustUpdateAt": "2019-04-03",
 	"builders": {
-		"pixel": "0.x"
+		"pixel": "0.x",
+		"react": "3.x",
+		"store": "0.x"
 	},
 	"dependencies": {
 		"vtex.pixel-interfaces": "1.x"

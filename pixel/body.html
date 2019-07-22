@@ -11,24 +11,4 @@
 		var s = document.getElementsByTagName('body')[0]
 		s.parentNode.insertBefore(kdt, s)
 	})()
-	;(function() {
-		var period = 300
-		var limit = 20 * 1e3
-		var nTry = 0
-		var intervalID = setInterval(function() {
-			var clear = limit / period <= ++nTry
-			if (typeof Konduto !== 'undefined' && Konduto.sendEvent) {
-				setKondutoFingerPrint()
-				clear = true
-			}
-			if (clear) {
-				clearInterval(intervalID)
-			}
-		}, period)
-	})()
-	var setKondutoFingerPrint = function() {
-		var kdtFP = Konduto.getVisitorID()
-		window.vtex.deviceFingerprint = kdtFP
-		Konduto.sendEvent('page', 'checkout')
-	}
 </script>
