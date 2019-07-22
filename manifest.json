@@ -9,7 +9,6 @@
 		"postreleasy": "vtex publish --verbose"
 	},
 	"builders": {
-		"store": "0.x",
 		"pixel": "0.x"
 	},
 	"dependencies": {
