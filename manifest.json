@@ -25,9 +25,9 @@
 		"title": "Konduto Antifraud Pixel",
 		"type": "object",
 		"properties": {
-			"kondutoPublicKey": {
-				"title": "Public key",
-				"description": "Enter with the public key from your Konduto account",
+			"kondutoId": {
+				"title": "Konduto ID",
+				"description": "enter the public_key informed by Konduto",
 				"type": "string"
 			}
 		}
