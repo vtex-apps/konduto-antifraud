@@ -5,9 +5,6 @@
 	"title": "Konduto Antifraud Pixel",
 	"description": "Konduto Antifraud Pixel",
 	"mustUpdateAt": "2019-04-03",
-	"scripts": {
-		"postreleasy": "vtex publish --verbose"
-	},
 	"builders": {
 		"pixel": "0.x"
 	},
