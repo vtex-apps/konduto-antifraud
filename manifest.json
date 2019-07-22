@@ -1,0 +1,36 @@
+{
+	"name": "konduto-pixel",
+	"vendor": "vtex",
+	"version": "0.0.0",
+	"title": "Konduto Antifraud Pixel",
+	"description": "Konduto Antifraud Pixel",
+	"mustUpdateAt": "2019-04-03",
+	"scripts": {
+		"postreleasy": "vtex publish --verbose"
+	},
+	"builders": {
+		"react": "3.x",
+		"store": "0.x",
+		"pixel": "0.x"
+	},
+	"dependencies": {
+		"vtex.pixel-interfaces": "1.x"
+	},
+	"policies": [
+		{
+			"name": "pixel"
+		}
+	],
+	"settingsSchema": {
+		"title": "Konduto Antifraud Pixel",
+		"type": "object",
+		"properties": {
+			"kondutoPublicKey": {
+				"title": "Public key",
+				"description": "Enter with the public key from your Konduto account",
+				"type": "string"
+			}
+		}
+	},
+	"$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
