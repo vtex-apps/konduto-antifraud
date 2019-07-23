@@ -5,11 +5,10 @@
   "title": "Konduto Antifraud Pixel",
   "description": "Konduto Antifraud Pixel",
   "mustUpdateAt": "2019-04-03",
-  "scripts": {
-    "postreleasy": "vtex publish --verbose"
-  },
   "builders": {
-    "pixel": "0.x"
+    "pixel": "0.x",
+    "react": "3.x",
+    "store": "0.x"
   },
   "dependencies": {
     "vtex.pixel-interfaces": "1.x"
@@ -25,7 +24,7 @@
     "properties": {
       "kondutoId": {
         "title": "Konduto ID",
-        "description": "enter the public_key informed by Konduto",
+        "description": "Enter the public_key informed by Konduto",
         "type": "string"
       }
     }
