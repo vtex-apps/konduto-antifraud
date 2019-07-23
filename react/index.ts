@@ -3,7 +3,7 @@ import { PixelMessage } from './typings/events'
 
 function setKondutoFingerPrint(category_page: string) {
   var kdtFP = Konduto.getVisitorID()
-  if (vtex && vtex.deviceFingerprint) {
+  if (vtex) {
     vtex.deviceFingerprint = kdtFP
     Konduto.sendEvent('page', category_page)
   }
