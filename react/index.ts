@@ -6,7 +6,6 @@ function setKondutoFingerPrint(category_page: string) {
   if (vtex && vtex.deviceFingerprint) {
     vtex.deviceFingerprint = kdtFP
     Konduto.sendEvent('page', category_page)
-    console.log('entrou na ', category_page)
   }
 }
 
@@ -20,9 +19,11 @@ export function handleEvents(e: PixelMessage) {
       switch (e.data.eventName) {
         case 'vtex:homeView': {
           setKondutoFingerPrint('home')
+          break
         }
         case 'vtex:productView': {
           setKondutoFingerPrint('product')
+          break
         }
       }
       clear = true

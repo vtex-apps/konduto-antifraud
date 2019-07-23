@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix switch/case statement.
+
 ## [0.2.0] - 2019-07-23
+
+### Added
+
+- Add homeView and productView events.
 
 ## [0.1.0] - 2019-07-22
 
