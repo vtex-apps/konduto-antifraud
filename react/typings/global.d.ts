@@ -1,13 +1,13 @@
 /* Typings for `Konduto` */
 export interface Konduto {
-	sendEvent: Function
-	getVisitorID: Function
+  sendEvent: Function
+  getVisitorID: Function
 }
 export interface VTEX {
-	deviceFingerprint: string
+  deviceFingerprint: string
 }
 
 declare global {
-	const Konduto: Konduto
-	const vtex: VTEX
+  const Konduto: Konduto
+  const vtex: VTEX
 }

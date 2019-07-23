@@ -7,7 +7,6 @@ package.json
 tsconfig.json
 tslint.json
 typings.d.ts
-yarn.lock
 render/node_modules/
 service/node_modules/
 react/__tests__/**

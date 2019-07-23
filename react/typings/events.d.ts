@@ -1,8 +1,8 @@
 export interface PixelMessage {
-	data: EventData
+  data: EventData
 }
 export interface EventData {
-	event: string
-	eventName: string
-	currency: string
+  event: string
+  eventName: string
+  currency: string
 }
