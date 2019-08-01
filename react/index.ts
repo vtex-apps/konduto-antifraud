@@ -9,23 +9,57 @@ function setKondutoFingerPrint(category_page: string) {
   }
 }
 
+function handlePageEvent(eventType: string) {
+  switch (eventType) {
+    case 'homeView': {
+      setKondutoFingerPrint('home')
+      break
+    }
+    case 'productView': {
+      setKondutoFingerPrint('product')
+      break
+    }
+    case 'departmentView':
+    case 'categoryView': {
+      setKondutoFingerPrint('category')
+      break
+    }
+    case 'accountView': {
+      setKondutoFingerPrint('account')
+      break
+    }
+    case 'internalSiteSearchView': {
+      setKondutoFingerPrint('search')
+      break
+    }
+  }
+}
+
+function handleAccountEvent(eventName: string) {
+  switch (eventName) {
+    case 'accountCreation': {
+      setKondutoFingerPrint('account_creation')
+      break
+    }
+    case 'passwordReset': {
+      setKondutoFingerPrint('password_reset')
+      break
+    }
+  }
+}
+
 export function handleEvents(e: PixelMessage) {
+  const {
+    data: { eventName, eventType },
+  } = e
   var period = 300
   var limit = 20 * 1e3
   var nTry = 0
   var intervalID = setInterval(function() {
     var clear = limit / period <= ++nTry
     if (typeof Konduto !== 'undefined' && Konduto.sendEvent) {
-      switch (e.data.eventName) {
-        case 'vtex:homeView': {
-          setKondutoFingerPrint('home')
-          break
-        }
-        case 'vtex:productView': {
-          setKondutoFingerPrint('product')
-          break
-        }
-      }
+      handlePageEvent(eventType)
+      handleAccountEvent(eventName)
       clear = true
     }
     if (clear) {
