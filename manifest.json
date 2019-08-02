@@ -1,6 +1,6 @@
 {
-  "name": "konduto-pixel",
-  "vendor": "vtex",
+  "name": "antifraud-pixel",
+  "vendor": "konduto",
   "version": "0.3.0",
   "title": "Konduto Antifraud Pixel",
   "description": "Konduto Antifraud Pixel",
