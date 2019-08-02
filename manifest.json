@@ -18,6 +18,9 @@
       "name": "pixel"
     }
   ],
+  "billingOptions": {
+    "free": true
+  },
   "settingsSchema": {
     "title": "Konduto Antifraud Pixel",
     "type": "object",
